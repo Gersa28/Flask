@@ -1,0 +1,24 @@
+└── 📁PROYECTO-APP_Factory    
+    └── 📁app
+        └── 📁static
+            └── 📁css
+                └── base.css
+            └── 📁images
+                └── cover-flask.jpg
+        └── 📁templates
+            └── 404.html
+            └── 500.html
+            └── base.html
+            └── hello.html
+            └── macros.html
+            └── navbar.html
+        └── __init__.py
+        └── config.py
+        └── forms.py   
+    └── 📁tests
+        └── test_base.py
+    └── .gitignore
+    └── comandos.txt
+    └── estructura_carpetas.png
+    └── main.py
+    └── requirements.txt

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macros %}
+
+{% block title %}
+    {{ super() }}
+    Bienvenido
+{% endblock %}
+
+{% block content %}
+    <div class="container mb-4">
+        {% if username %}
+            <h1>Bienvenido, {{ username | capitalize }}</h1>
+        {% endif %}
+        
+        {% if user_ip %}
+            <h3>Tu IP es {{ user_ip }}</h3>
+        {% else %}
+            <a href="{{ url_for('index') }}">Ir a inicio</a>
+        {% endif %}
+    </div>
+
+    <!-- Espacio adicional debajo del contenedor -->
+    <div style="margin-bottom: 2rem;"></div>
+
+
+    <div class="container">
+        <h2>Crea una nueva tarea</h2>    
+        <form action="{{ url_for('hello') }}" method="post">
+            <!-- Campo para la descripción de la tarea -->
+            <div class="mb-3">
+                {{ todo_form.description.label(class="form-label") }}
+                {{ todo_form.description(class="form-control", placeholder="Ingrese la descripción de la tarea") }}
+            </div>
+    
+            <!-- Botón de envío del formulario -->
+            <div class="mb-3">
+                {{ todo_form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+    
+    <ul class="list-group">
+        {% for todo in todos %}
+            {{ macros.render_todo(todo, delete_form, update_form) }}
+        {% endfor %}
+    </ul>
+
+{% endblock %}

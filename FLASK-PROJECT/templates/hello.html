@@ -1,0 +1,59 @@
+{% extends 'base.html' %} {# Este es el HTML que se mostrará, rellanado con lo que configure #}
+
+{% import 'macros.html' as macros %}
+
+
+
+{% block title %}
+    {{ super() }}  {# Para no sobreescribir #}
+    Bienvenido
+{% endblock %}
+
+{% block content %}
+    {% if username %}
+        <h1>Bienvenido, {{ username | capitalize }}</h1>
+    {% endif %}
+
+    {% if user_ip %}
+        <h1>
+            Hello World, Flask with debugging enabled. 
+            Your IP address is: {{ user_ip }}
+        </h1>
+    {% else %}
+        <a href="{{ url_for('index') }}">Ir a Inicio</a>
+    {% endif %}
+
+    <div class="container">
+        <form action="{{ url_for('hello')}}" method="POST">
+            
+            {{ login_form.csrf_token }}
+        
+            <div class="form-group">
+                <label for="username">{{ login_form.username.label }}</label>
+                {{ login_form.username(class="form-control") }}
+            </div>
+        
+            <div class="form-group">
+                <label for="password">{{ login_form.password.label }}</label>
+                {{ login_form.password(class="form-control") }}
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Submit</button>
+            
+        </form>
+        
+    </div>
+
+    <ul>
+        {% for tarea in tareas %}
+            {{ macros.render_todo(tarea) }} 
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
+{# 
+NOTAS:
+    {{ super() }} : Para no sobre escribir lo que hay en el bloque title 
+    y sumar lo que le pasamos, par obtner Flask Tutorial + Buenvenido 
+#}

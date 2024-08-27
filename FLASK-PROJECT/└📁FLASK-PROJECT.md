@@ -1,0 +1,17 @@
+└── 📁FLASK-PROJECT
+    └── 📁static
+        └── 📁css
+            └── base.css
+        └── 📁images
+            └── cover-flask.jpg
+    └── 📁templates
+        └── 404.html
+        └── 500.html
+        └── base.html
+        └── hello.html
+        └── macros.html
+        └── navbar.html
+    └── 📁tests
+        └── test_base.py
+    └── main.py
+    └── requirements.txt

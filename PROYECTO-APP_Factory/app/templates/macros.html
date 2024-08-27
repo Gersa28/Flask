@@ -1,0 +1,27 @@
+{% macro render_todo(todo,delete_form,update_form) %}
+    <li class="list-group-item d-flex align-items-center">
+        <!-- Contenedor para la descripción y el valor 'done' -->
+        <div class="d-flex flex-grow-1 align-items-center">
+            <!-- Descripción de la tarea -->
+            <span class="me-3">Descripción: {{ todo.to_dict().description }}</span>
+            
+            <!-- Valor del campo 'done' -->
+            <span class="badge bg-secondary">{{ todo.to_dict().done }}</span>
+        </div>
+        
+        <!-- Formulario para eliminar la tarea -->
+        <form action="{{ url_for('delete', todo_id=todo.id) }}" method="post" class="me-2">
+            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+        </form>
+
+        <!-- Formulario para actualizar la tarea -->
+        <form action="{{ url_for('update', todo_id=todo.id, done=todo.to_dict().done) }}" method="post" class="d-flex align-items-center">
+            <input type="hidden" name="description" value="{{ todo.to_dict().description }}">
+            <input type="hidden" name="done" value="{{ todo.to_dict().done }}">
+            <button type="submit" class="btn btn-warning btn-sm">Actualizar</button>
+        </form> 
+        
+        
+    </li>
+{% endmacro %}
+

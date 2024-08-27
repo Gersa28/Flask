@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }}
+    Signup
+{% endblock %}
+
+{% block content %}
+    <h1>Registra una cuenta</h1>
+
+    <div class="container">
+        <form action="{{ url_for('auth.signup') }}" method="post">
+            <div class="mb-3">
+                <label for="username" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Ingrese su usuario" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese su contraseña" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirm_password" class="form-label">Confirmar Contraseña</label>
+                <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirme su contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+        </form>
+    </div>
+{% endblock %}

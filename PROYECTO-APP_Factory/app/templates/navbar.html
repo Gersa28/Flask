@@ -1,0 +1,28 @@
+<div class="navbar navbar-dark bg-dark mb-4" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button"
+                    class="navbar-toggler"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent">
+                <span class="visually-hidden">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/cover-flask.jpg') }}"
+                     style="max-width: 48px"
+                     alt="Platzi logo">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto">
+                {% if current_user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.logout') }}">Logout</a></li>
+                {% endif %}
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.notion.so/german-salina/775f8b5f910841a19ea81c4dbac66aec?v=15294479cb594a09afbd39259970f989&pvs=4" target="_blank">Mi Blog</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
