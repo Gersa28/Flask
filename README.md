@@ -3,9 +3,7 @@ Prácticas Con Flask
 
 [Teoría y Contexto ](https://www.notion.so/german-salina/Flask-9b623d6a80d94c699381bd1de9dca290)
 
-Gracias por la aclaración. Aquí te dejo el formato solicitado para tu archivo `Readme.md` usando el formato de bloques desplegables con las etiquetas `<details>` y `<summary>`:
 
-```md
 # **INVERA: ToDo-List Challenge**
 
 ## 👁 Información
@@ -16,8 +14,6 @@ Gracias por la aclaración. Aquí te dejo el formato solicitado para tu archivo 
 **Cel:** +54 9 3434599358  
 **LinkedIn:** [Bioingeniero Germán Salina](https://www.linkedin.com/in/ingeniero-salina-german/)  
 **Página Web:** [Blog Personal](https://www.notion.so/775f8b5f910841a19ea81c4dbac66aec?pvs=21)  
-**Github:** [**GITHUB**](https://github.com/Gersa28)  
-**Proyectos del Curso:** Repositorio
 
 ---
 
@@ -239,6 +235,3 @@ Gracias por la aclaración. Aquí te dejo el formato solicitado para tu archivo 
   ```
 
 </details>
-```
-
-Este formato utiliza los bloques `<details>` y `<summary>` para crear secciones plegables dentro del `Readme.md`, lo que permite una visualización más limpia y organizada, exactamente como habías solicitado.
