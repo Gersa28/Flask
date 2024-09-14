@@ -15,7 +15,8 @@ Prácticas Con Flask
 **LinkedIn:** [Bioingeniero Germán Salina](https://www.linkedin.com/in/ingeniero-salina-german/)  
 **Página Web:** [Blog Personal](https://www.notion.so/775f8b5f910841a19ea81c4dbac66aec?pvs=21)  
 
----
+
+
 
 ## 🗝️ Requisitos
 
@@ -42,7 +43,7 @@ Prácticas Con Flask
 
 </details>
 
----
+
 
 ## 🎯 Objetivos
 
@@ -58,7 +59,7 @@ Prácticas Con Flask
 
 </details>
 
----
+
 
 ## 📜 Resumen
 
@@ -82,7 +83,7 @@ Prácticas Con Flask
   
 </details>
 
----
+
 
 # Guía de Instalación
 
@@ -164,7 +165,7 @@ Prácticas Con Flask
 
 </details>
 
----
+
 
 # Aplicación WEB
 
@@ -175,7 +176,7 @@ Prácticas Con Flask
 
 </details>
 
----
+
 
 # Peticiones a la API
 
@@ -205,7 +206,7 @@ Prácticas Con Flask
 
 </details>
 
----
+
 
 # Testing
 
@@ -220,7 +221,7 @@ Prácticas Con Flask
 
 </details>
 
----
+
 
 # Manejo de Logs
 
